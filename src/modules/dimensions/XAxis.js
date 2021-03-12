@@ -262,7 +262,7 @@ export default class DimXAxis {
           gl.skipLastTimelinelabel = true
         }
         if (firstLabelPosition < 0) {
-          gl.skipFirstTimelinelabel = true
+          gl.skipFirstTimelinelabel = false
         }
       } else if (xtype === 'datetime') {
         // If user has enabled DateTime, but uses own's formatter
