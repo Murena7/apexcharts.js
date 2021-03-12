@@ -259,7 +259,7 @@ export default class DimXAxis {
           this.dCtx.yAxisWidthLeft
 
         if (lastLabelPosition > gl.svgWidth - gl.translateX) {
-          gl.skipLastTimelinelabel = true
+          gl.skipLastTimelinelabel = false
         }
         if (firstLabelPosition < 0) {
           gl.skipFirstTimelinelabel = false
@@ -267,7 +267,7 @@ export default class DimXAxis {
       } else if (xtype === 'datetime') {
         // If user has enabled DateTime, but uses own's formatter
         if (this.dCtx.gridPad.right < lbWidth && !gl.rotateXLabels) {
-          gl.skipLastTimelinelabel = true
+          gl.skipLastTimelinelabel = false
         }
       } else if (xtype !== 'datetime') {
         if (

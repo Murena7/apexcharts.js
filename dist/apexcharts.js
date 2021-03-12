@@ -13469,7 +13469,7 @@
             _this.dCtx.yAxisWidthLeft;
 
             if (lastLabelPosition > gl.svgWidth - gl.translateX) {
-              gl.skipLastTimelinelabel = true;
+              gl.skipLastTimelinelabel = false;
             }
 
             if (firstLabelPosition < 0) {
@@ -13478,7 +13478,7 @@
           } else if (xtype === 'datetime') {
             // If user has enabled DateTime, but uses own's formatter
             if (_this.dCtx.gridPad.right < lbWidth && !gl.rotateXLabels) {
-              gl.skipLastTimelinelabel = true;
+              gl.skipLastTimelinelabel = false;
             }
           } else if (xtype !== 'datetime') {
             if (_this.dCtx.gridPad.right < lbWidth / 2 - _this.dCtx.yAxisWidthRight && !gl.rotateXLabels && (w.config.xaxis.tickPlacement !== 'between' || w.globals.isBarHorizontal)) {
